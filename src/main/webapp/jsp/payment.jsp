@@ -19,8 +19,6 @@
         <fmt:message key="payment.invalid_cvv" var="invalid_cvv"/>
     </fmt:bundle>
     <title></title>
-    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="css/payment.css" type="text/css">
 </head>
 <body>
@@ -66,9 +64,6 @@
             <p>${error_message}</p>
         </c:when>
     </c:choose>
-
-
 </div>
-
 </body>
 </html>

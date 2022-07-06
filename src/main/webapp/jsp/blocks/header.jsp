@@ -1,6 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <link rel="stylesheet" href="css/header.css" type="text/css">
@@ -24,12 +22,12 @@
 </head>
 <body>
 <div class="header">
-    <a href=href="${context_path}/controller?command=go_to_main_page class="header__logo">CarRental</a>
+    <a href="${context_path}/controller?command=default" class="header__logo">CarRental</a>
     <div class="header__links">
-        <a href="${context_path}/controller?command=go_to_main_page">${news}</a>
+        <a href="${context_path}/controller?command=go_to_news_page">${news}</a>
         <a href="${context_path}/controller?command=go_to_cars_page">${cars}</a>
         <c:if test="${sessionScope.user != null}">
-            <a href="Controller?command=go_to_orders_page">${orders}</a>
+            <a href="/controller?command=go_to_orders_page">${orders}</a>
         </c:if>
         <c:choose>
             <c:when test="${sessionScope.user eq null}">

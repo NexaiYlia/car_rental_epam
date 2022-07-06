@@ -54,7 +54,7 @@
     <title></title>
 </head>
 <body>
-<jsp:include page="../jsp/header.jsp"/>
+<jsp:include page="../jsp/blocks/header.jsp"/>
 <c:set var="error" value="${requestScope.error}"/>
 <c:set var="validation" value="${requestScope.validation}"/>
 <c:choose>
@@ -113,6 +113,6 @@
         </div>
     </form>
 </div>
-<jsp:include page="../jsp/footer.jsp"/>
+<jsp:include page="../jsp/blocks/footer.jsp"/>
 </body>
 </html>

@@ -82,9 +82,7 @@
             <p>${validation_message}</p>
         </c:when>
     </c:choose>
-
-
 </div>
-<jsp:include page="../jsp/footer.jsp"/>
+<jsp:include page="../jsp/blocks/footer.jsp"/>
 </body>
 </html>

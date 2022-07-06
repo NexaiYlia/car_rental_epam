@@ -25,12 +25,19 @@ public class AccidentDaoImpl implements AccidentDao {
     private static final String DELETE_BY_ID_QUERY = "DELETE FROM accidents WHERE id=?;";
     private static final String ADD_QUERY = "INSERT INTO accidents (date, description, cost, order_id) " +
             "VALUE (?, ?, ?, ?)";
+    private static final String GET_BY_ORDER_QUERY = "SELECT * FROM accidents WHERE order_id=?;";
 
     private static final OrderDao ORDER_DAO = DaoHelper.getInstance().getOrderDao();
 
     @Override
     public List<Accident> getAllByOrderId(Integer orderId) throws DaoException {
-        return null;
+        try (Connection connection = ConnectionPool.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(GET_BY_ORDER_QUERY)) {
+            statement.setInt(1, orderId);
+            return executeForManyResults(statement);
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
     }
 
     @Override
@@ -47,8 +54,7 @@ public class AccidentDaoImpl implements AccidentDao {
     @Override
     public List<Accident> getAll() throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(GET_ALL_QUERY)
-        ) {
+             PreparedStatement statement = connection.prepareStatement(GET_ALL_QUERY)) {
             return executeForManyResults(statement);
         } catch (SQLException e) {
             throw new DaoException(e);

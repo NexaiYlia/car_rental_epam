@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="sharing" uri="carsharing" %>
 <html>
 <head>
     <title></title>
@@ -138,7 +137,5 @@
             </ul>
         </div>
 </div>
-
-<script src="js/ckeditor_config.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" %>
+         <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+         <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title></title>
@@ -24,7 +24,7 @@
 
 </head>
 <body>
-<jsp:include page="../jsp/header.jsp"/>
+<jsp:include page="/jsp/blocks/header.jsp"/>
 <c:set var="n" value="${requestScope.data}"/>
 <c:set var="is_register_failed" scope="request" value="${requestScope.error}"/>
 <c:set var="is_invalid_data" scope="request" value="${requestScope.validation}"/>
@@ -37,7 +37,7 @@
         <p class="error">${validation_message}</p>
     </c:when>
 </c:choose>
-<form action="Upload" method="post" enctype='multipart/form-data'>
+<form action="upload" method="post" enctype='multipart/form-data'>
     <div class="container">
         <div class="editor_block">
             <div class="editor_block__header">
@@ -89,8 +89,5 @@
         </div>
     </div>
 </form>
-
-<script src="js/ckeditor_config.js"></script>
-
 </body>
 </html>

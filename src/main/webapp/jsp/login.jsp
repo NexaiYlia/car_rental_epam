@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="css/login.css" type="text/css"/>
 Hello
 </div>
-<jsp:include page="/WEB-INF/jsp/footer.jsp"/>
+<jsp:include page="/WEB-INF/jsp/blocks/footer.jsp"/>
 </body>
 </html>

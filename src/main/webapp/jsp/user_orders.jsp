@@ -1,13 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="display" uri="http://displaytag.sf.net" %>
-<%@ taglib prefix="sharing" uri="carsharing" %>
 <html>
 <head>
     <title></title>
     <link rel="stylesheet" href="css/user_orders.css" type="text/css"/>
-    <script src="js/form.js"></script>
     <fmt:setLocale value="${sessionScope.locale}" scope="session"/>
 
     <fmt:bundle basename="content">
@@ -40,7 +37,7 @@
     </fmt:bundle>
 </head>
 <body>
-<jsp:include page="../jsp/header.jsp"/>
+<jsp:include page="../jsp/blocks/header.jsp"/>
 <c:set var="is_admin" value="${sessionScope.user.role eq 'ADMIN'}"/>
 
 <div class="main_block">
