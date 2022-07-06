@@ -11,7 +11,7 @@ The purpose of the Car Rental app is to support the car rental company. The main
 
 <h3>1.2	Tools</h3>
 <p align="justify">
-In the project I used tools such as JDBC, JSP, MySql, FlyWay, JUnit, exception handling, localization and internationalization. Created my own exceptions and views for them.
+In the project I used tools such as JDBC, JSP, MySql, JUnit, exception handling, localization and internationalization. Created my own exceptions and views for them.
 </p>
 
 <h3>1.3	Database schema</h3>
