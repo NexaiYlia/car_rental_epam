@@ -1,0 +1,26 @@
+* {
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_box {
+    background: #ff9d26;
+    border-radius: 15px;
+    padding: 50px;
+    font-size: 30px;
+}
+
+.error_box a {
+    color: rgba(71, 71, 71, 0.6);
+    text-decoration: none;
+}
+
+.error_box a:hover {
+    color: red;
+    transition: .7s;
+}

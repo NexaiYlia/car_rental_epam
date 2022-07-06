@@ -1,0 +1,137 @@
+.admin_button_panel {
+    background: limegreen;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px auto 0;
+    width: 90%;
+}
+
+#admin_but_add {
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+}
+
+#admin_but_add:hover {
+    opacity: .7;
+}
+
+.nothing_found {
+    color: red;
+    text-align: center;
+}
+
+.nothing_found a {
+    text-decoration: none;
+}
+
+.user_panel {
+    margin: 10px 0 3px 15px;
+    display: flex;
+}
+
+.user_panel input {
+    margin-left: 10px;
+    padding: 6px;
+    border: 1px solid #ff9d26;
+    font-size: 17px;
+}
+
+.user_panel button[type=submit] {
+    background: #ff9d26;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    margin: 5px;
+    width: 35px;
+    height: 100%;
+}
+
+.user_panel button[type=submit]:hover {
+    opacity: 0.7;
+    transition: .4s;
+}
+
+.preview__close {
+    color: red;
+}
+
+.preview__close:hover {
+    opacity: 0.7;
+}
+
+.main_block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.car_block {
+    border: 1px solid rgba(71, 71 ,71, 0.6);
+    border-radius: 5px;
+
+    margin: 10px auto 10px auto;
+
+    height: auto;
+}
+
+.car_block__brand {
+    background: #f99d26;
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.car_block__img img {
+    width: 440px;
+
+    min-height: 260px;
+    max-height: 260px;
+}
+
+.car_block__characteristics {
+    margin-left: 7px;
+    font-size: 22px;
+}
+
+
+.car_block__price {
+    color: #ff9d26;
+    margin-right: 7px;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.car_block__button {
+    margin: 10px 5px 10px 10px;
+    float: right;
+}
+
+.car_block__button a {
+    text-decoration: none;
+    color: black;
+    height: auto;
+    width: auto;
+    padding: 5px;
+    background: transparent;
+    border: 1px solid #ff9d26;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.car_block__button a:hover {
+    background: #ff9d26;
+}
+
+@media screen and (max-width: 915px) {
+    .user_panel {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .user_panel button[type=submit] {
+        height: auto;
+    }
+}

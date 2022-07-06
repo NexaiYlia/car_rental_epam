@@ -1,0 +1,137 @@
+.error {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.container h5 {
+    margin: 10px auto 10px auto;
+}
+
+.editor_block {
+    background-color: #ff9d26;
+    overflow: hidden;
+    margin: 10px auto 10px auto;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ff9d26;
+    border-radius: 7px;
+}
+
+.editor_block__header {
+    text-align: left;
+    font-size: 32px;
+}
+
+#header_editor {
+    width: 99%;
+    height: 55px;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+#header_editor:hover {
+    border: 1px solid #ff9d26;
+    border-radius: 3px;
+}
+
+.editor_block__image {
+    width: inherit;
+}
+
+.editor_block__image img {
+    width: inherit;
+}
+
+.editor_block__content {
+    text-align: left;
+    font-size: 32px;
+}
+
+.navigation {
+    display: flex;
+    float: right;
+}
+
+.navigation a {
+    background-color: rgba(71, 71, 71, 0.6);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover, .navigation a:hover {
+    opacity: 0.9;
+}
+
+.preview {
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, .7);
+    transition: all .4s;
+}
+
+.preview:target {
+    background: white;
+    visibility: visible;
+    opacity: 1;
+}
+
+.preview__close {
+    position: relative;
+    float: right;
+    top: 10px;
+    right: 10px;
+    color: #585858;
+    text-decoration: none;
+}
+
+.preview__close {
+    color: red;
+}
+
+.preview__close:hover {
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

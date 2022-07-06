@@ -1,0 +1,105 @@
+* {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.admin_panel {
+    text-align: center;
+    height: 30px;
+    text-decoration: none;
+}
+
+.admin_panel a {
+    color: red;
+}
+
+.order_block {
+    background: #ff9d26;
+    width: 95%;
+    height: 75px;
+    margin: 10px auto 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+}
+
+th {
+    background: #ff9d26;
+    border: 1px solid black;
+}
+
+td {
+    text-align: center;
+    width: 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+textarea {
+    outline-color: #ff9d26;
+    font-size: 16px;
+    height: 100%;
+    resize: none;
+}
+
+.button_panel {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.button_panel a {
+    margin-left: 3px;
+    text-decoration: none;
+    color: #ff9d26;
+}
+
+.button_panel a:hover {
+    opacity: .6;
+    transition: .4s;
+}
+
+.pagelinks {
+    margin: 10px auto 10px auto;
+}
+
+.actions {
+    background: rgba(71, 71, 71, 0.1);
+
+}
+
+.actions button, .actions a {
+    border: none;
+    background: transparent;
+    color: #ff9d26;
+}
+
+.actions a:visited {
+    color: #ff9d26;
+}
+
+.actions button:hover, .actions a:hover {
+    opacity: .6;
+    transition: .4s;
+}
+
+#approve {
+    color: limegreen;
+}
+
+#approve:visited {
+    color: limegreen;
+}
+
+
+#reject {
+    color: red;
+}
+
+#reject:visited {
+    color: red;
+}

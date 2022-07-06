@@ -1,0 +1,75 @@
+* {
+    font-family: Tahoma, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+.bg-image {
+    /* The image used */
+    background: whitesmoke no-repeat center;
+    background-size: cover;
+
+    height: 100%;
+
+.register {
+    text-align: center;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    background: rgba(44, 44, 44, 0.6);
+
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    border: 0;
+    border-radius: 15px;
+
+    font-size: 16px;
+    line-height: 40px;
+    color: white;
+}
+
+.register input {
+    height: 30px;
+    color: black;
+    font-size: inherit;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.register .button {
+    background: #ff9d26;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: inherit;
+}
+
+.register a {
+    text-decoration: none;
+    font-size: inherit;
+    color: #ff9d26;
+}
+
+.register p {
+    margin: -5px;
+    color: white;
+}
+
+p:hover {
+    transition: .4s;
+    color: navajowhite;
+}
+
+.register a:hover {
+    opacity: .8;
+}

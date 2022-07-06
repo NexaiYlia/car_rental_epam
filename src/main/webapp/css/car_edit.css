@@ -1,0 +1,47 @@
+.error {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 880px;
+}
+
+.editor_block__header,
+.editor_block__content {
+    text-align: center;
+}
+
+.editor_block__header .content_editor {
+    font-size: 20px;
+    width: 25%;
+    height: 40px;
+}
+
+.editor_block__content .content_editor {
+    font-size: 20px;
+    width: 45%;
+    height: 40px;
+}
+
+ .editor_block__image {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 650px;
+    }
+
+    .editor_block {
+        margin-left: 10px;
+    }
+
+    .editor_block__header {
+        display: block;
+        align-items: center;
+    }
+}
