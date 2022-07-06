@@ -27,6 +27,9 @@ public class CarDaoImpl implements CarDao {
     private static final String DELETE_BY_ID_QUERY = "DELETE FROM cars WHERE id=?;";
     private static final String ADD_CAR_QUERY = "INSERT INTO cars (brand, model, gearbox, manufactured_year, engine_type, price_per_day, class, image_path) " +
             "VALUE (?, ?, ?, ?, ?, ?, ?, ?)";
+    private static final String FIND_BY_BRAND_QUERY = "SELECT * FROM cars WHERE brand=?;";
+    private static final String FIND_BY_PRICE_QUERY = "SELECT * FROM cars WHERE  price_per_day BETWEEN ? AND ?;";
+    private static final String FIND_BY_CAR_CLASS_QUERY = "SELECT * FROM cars WHERE class=?;";
 
     @Override
     public Optional<Car> getById(int id) throws DaoException {
@@ -83,7 +86,7 @@ public class CarDaoImpl implements CarDao {
     @Override
     public List<Car> getCarsByName(String criteria) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-            PreparedStatement statement = connection.prepareStatement(GET_BY_NAME)) {
+             PreparedStatement statement = connection.prepareStatement(GET_BY_NAME)) {
             statement.setString(1, criteria);
             return executeForManyResults(statement);
         } catch (SQLException e) {
@@ -149,7 +152,7 @@ public class CarDaoImpl implements CarDao {
             CarClass carClass = CarClass.valueOf(resultSet.getString(8).toUpperCase());
             String imagePath = resultSet.getString(9);
 
-            Car car = new Car(id, brand, model,  gearboxType, year,
+            Car car = new Car(id, brand, model, gearboxType, year,
                     engineType, pricePerDay, carClass, imagePath);
 
             cars.add(car);
@@ -180,5 +183,42 @@ public class CarDaoImpl implements CarDao {
         }
 
         return car;
+    }
+
+
+    @Override
+    public List<Car> findCarsByPricePerDayBetween(BigDecimal pricePerDayAfter, BigDecimal pricePerDayBefore) throws DaoException {
+        try (Connection connection = ConnectionPool.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(FIND_BY_PRICE_QUERY)) {
+            statement.setInt(1, Integer.valueOf(String.valueOf(pricePerDayAfter)));
+            statement.setInt(2, Integer.valueOf(String.valueOf(pricePerDayBefore)));
+
+            return executeForManyResults(statement);
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+    }
+
+    @Override
+    public List<Car> findCarsByCarType(CarClass carClass) throws DaoException {
+        try (Connection connection = ConnectionPool.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(FIND_BY_CAR_CLASS_QUERY)) {
+            statement.setString(1, String.valueOf(carClass));
+            return executeForManyResults(statement);
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+    }
+
+    @Override
+    public List<Car> findCarsByBrand(String brand) throws DaoException {
+        try (Connection connection = ConnectionPool.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(FIND_BY_BRAND_QUERY)) {
+            statement.setString(1, brand);
+
+            return executeForManyResults(statement);
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
     }
 }

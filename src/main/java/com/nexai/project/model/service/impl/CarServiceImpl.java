@@ -108,4 +108,19 @@ public class CarServiceImpl implements CarService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public List<Car> findCarsByPricePerDayBetween(BigDecimal pricePerDayAfter, BigDecimal pricePerDayBefore) throws DaoException {
+        return CAR_DAO.findCarsByPricePerDayBetween(pricePerDayAfter, pricePerDayBefore);
+    }
+
+    @Override
+    public List<Car> findCarsByCarType(CarClass carType) throws DaoException {
+        return CAR_DAO.findCarsByCarType(carType);
+    }
+
+    @Override
+    public List<Car> findCarsByBrand(String brand) throws DaoException {
+        return CAR_DAO.findCarsByBrand(brand);
+    }
 }
